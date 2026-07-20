@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Agricultural Science Learning Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="AI Agricultural Science Learning Studio home">
+        <span class="brand-icon" aria-hidden="true">🌱</span>
+        <span>AI Agricultural Science Learning Studio</span>
+      </a>
+      <a class="nav-link" href="#generator">Open Generator</a>
+    </nav>
+
+    <section class="hero-grid" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">OpenAI Build Week Submission</p>
+        <h1>Generate classroom-ready Agricultural Science resources in seconds.</h1>
+        <p class="hero-text">
+          A simple browser-based studio that helps teachers create structured sample lesson plans,
+          practical activities, assessments, marking schemes and revision materials.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#generator">Start generating</a>
+          <a class="button secondary" href="#about">Learn more</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Project highlights">
+        <h2>Teacher workflow</h2>
+        <ul>
+          <li>Enter a topic</li>
+          <li>Select learner level</li>
+          <li>Set lesson duration</li>
+          <li>Choose resource type</li>
+          <li>Generate a polished sample</li>
+        </ul>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="studio" id="generator" aria-labelledby="generator-title">
+      <div class="section-heading">
+        <p class="eyebrow">Resource generator</p>
+        <h2 id="generator-title">Build a teaching resource</h2>
+        <p>Complete the form and generate a structured sample that can be reviewed, edited and adapted for your class.</p>
+      </div>
+
+      <div class="app-shell">
+        <form class="generator-form" id="resourceForm">
+          <label for="topic">Agricultural Science topic</label>
+          <input id="topic" name="topic" type="text" placeholder="e.g. Soil fertility management" required />
+
+          <label for="level">Student level</label>
+          <select id="level" name="level" required>
+            <option value="Junior Secondary">Junior Secondary</option>
+            <option value="Senior Secondary" selected>Senior Secondary</option>
+            <option value="College / TVET">College / TVET</option>
+            <option value="Introductory Adult Learning">Introductory Adult Learning</option>
+          </select>
+
+          <label for="duration">Lesson duration</label>
+          <input id="duration" name="duration" type="text" placeholder="e.g. 45 minutes" value="45 minutes" required />
+
+          <label for="outputType">Output type</label>
+          <select id="outputType" name="outputType" required>
+            <option value="lessonPlan">Lesson plan</option>
+            <option value="practicalActivity">Practical activity</option>
+            <option value="assessmentQuestions">Assessment questions</option>
+            <option value="markingScheme">Marking scheme</option>
+            <option value="revisionMaterial">Revision material</option>
+          </select>
+
+          <button class="button primary generate" type="submit">Generate resource</button>
+          <p class="helper-text">This prototype produces sample educational content locally in your browser; no data is sent to a server.</p>
+        </form>
+
+        <section class="output-panel" aria-live="polite" aria-labelledby="output-title">
+          <div class="output-header">
+            <div>
+              <p class="eyebrow">Generated output</p>
+              <h2 id="output-title">Your resource will appear here</h2>
+            </div>
+            <button class="copy-button" id="copyButton" type="button">Copy</button>
+          </div>
+          <article class="resource-output" id="resourceOutput">
+            <p class="empty-state">Enter a topic, choose your settings and click <strong>Generate resource</strong> to view a sample.</p>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">Purpose</p>
+        <h2 id="about-title">Designed for practical Agricultural Science teaching</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <h3>Curriculum-minded</h3>
+          <p>Outputs include objectives, key terms, activities and evaluation prompts teachers can align with their syllabus.</p>
+        </article>
+        <article>
+          <h3>Teacher-friendly</h3>
+          <p>The interface is responsive, readable and focused on the information teachers need before class.</p>
+        </article>
+        <article>
+          <h3>Deployment-ready</h3>
+          <p>The app uses static HTML, CSS and JavaScript, so it can be hosted directly with GitHub Pages.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built for OpenAI Build Week • AI Agricultural Science Learning Studio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
